@@ -12,7 +12,8 @@ function hello(req)
         env: process.env,
         argv: process.argv,
         vars: req.variables,
-        req: req
+        req,
+        njs
     }));
 }
 
