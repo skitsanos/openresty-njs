@@ -260,6 +260,10 @@ function fileBrowser(req)
             }
             return;
 
+        case 'PUT':
+            req.return(405, response.error({message: 'Not supported yet'}));
+            return;
+
         case 'DELETE':
             if (!isFileRequested)
             {
@@ -269,7 +273,8 @@ function fileBrowser(req)
             else
             {
                 //deleting file
-                req.return(500, response.error({message: 'NJS has no support for file removal at this moment'}));
+                fs.unlinkSync(fullPath);
+                //req.return(500, response.error({message: 'NJS has no support for file removal at this moment'}));
             }
 
             req.return(200, response.result({pathRequested, isFileRequested}));
