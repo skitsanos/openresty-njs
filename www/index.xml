@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page title="Test page">
+    <content>
+        hello from xml
+    </content>
+</page>
