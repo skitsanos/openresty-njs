@@ -30,12 +30,9 @@ message "info" "Checking for OS updates ..."
 apt update -y
 apt upgrade -y
 
-# Make tools
-message "info" "Checking for make utility ..."
-if ! app_found make; then
-  message 'info' 'Failed to find make. Installing...'
-  apt install make -y
-fi
+message "info" "Installing build tools and dependencies ..."
+apt install -y openssl curl ca-certificates zlib1g zlib1g-dev libxml2 libxml2-dev libxslt1.1 libxslt1-dev
+apt install -y libpcre3-dev libssl-dev perl make build-essential
 
 # Dependencies: xmlstarlet
 message "info" "Checking for xmlstarlet utility ..."
