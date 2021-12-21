@@ -9,3 +9,8 @@ sudo ./build-from-sources.sh
 ```
 
 Get some patience, it takes some time ...
+
+### Additional info
+
+- [NGINX JavaScript examples](https://github.com/nginx/njs-examples/)
+- [NJS Learning Materials](https://github.com/soulteary/njs-learning-materials)
