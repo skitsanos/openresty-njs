@@ -30,10 +30,17 @@ message "info" "Checking for OS updates ..."
 apt update -y
 apt upgrade -y
 
+# Make tools
+message "info" "Checking for make utility ..."
+if ! app_found make; then
+  message 'info' 'Failed to find make. Installing...'
+  apt install make -y
+fi
+
 # Dependencies: xmlstarlet
 message "info" "Checking for xmlstarlet utility ..."
 if ! app_found xmlstarlet; then
-  message 'error' 'Failed to find xmlstarlet. Installing...'
+  message 'info' 'Failed to find xmlstarlet. Installing...'
   apt install xmlstarlet -y
 fi
 
