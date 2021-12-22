@@ -104,7 +104,7 @@ message "info" "Configuring OpenResty with NJS module ..."
 make install
 
 echo $PWD
-echo 'Add \n export PATH=/usr/local/openresty/bin:/usr/local/openresty/nginx/sbin:$PATH'
+echo 'Add export PATH=/usr/local/openresty/bin:/usr/local/openresty/nginx/sbin:$PATH'
 
 message "info" "Done!"
 exit 0

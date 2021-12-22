@@ -171,7 +171,7 @@ function fileBrowser(req)
                         req.log(item.name);
                         arr.push({
                             name: item.name,
-                            type: item.isDirectory() ? 'directory' : 'file'
+                            //type: item.isDirectory() ? 'directory' : 'file'
                         });
                     }
                 }
